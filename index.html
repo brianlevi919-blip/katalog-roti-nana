@@ -1,0 +1,1354 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8e9">
+  <meta name="description" content="Roti Nana dari Friends Bakery: roti nikmat, ringan di saku, diproduksi oleh PT Pangan Mekar Jaya sejak 1980.">
+  <title>Roti Nana — Friends Bakery</title>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:site_name" content="Friends Bakery — Roti Nana">
+  <meta property="og:title" content="Roti Nana — Nikmat di Mulut, Ringan di Saku">
+  <meta property="og:description" content="Kenali aneka pilihan Roti Nana dari Friends Bakery, diproduksi oleh PT Pangan Mekar Jaya sejak 1980.">
+  <meta property="og:image" content="assets/roti-nana-2-rasa-coklat-strawberry.png">
+  <link rel="icon" type="image/png" href="assets/logo_friend_bakery-removebg-preview-2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/roti-nana-2-rasa-coklat-strawberry.png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Friends Bakery — Roti Nana",
+      "description": "Friends Bakery, produsen Roti Nana dari PT Pangan Mekar Jaya, berdiri di Sidoarjo sejak 1980.",
+      "logo": "assets/logo_friend_bakery-removebg-preview-2.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sidoarjo",
+        "addressRegion": "Jawa Timur",
+        "addressCountry": "ID"
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --cream: #fff8e9;
+      --paper: #fffdf8;
+      --ink: #172b45;
+      --muted: #647184;
+      --green: #14365a;
+      --orange: #e94932;
+      --line: #e9e2d4;
+      --serif: "DM Sans", Arial, sans-serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      color-scheme: light;
+      color-scheme: light;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { margin: 0; color: var(--ink); background: #fffaf0; font-family: var(--sans); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    .wrap { width: min(1160px, calc(100% - 48px)); margin: auto; }
+
+    .topbar { background: var(--green); color: #f5f2e9; font-size: 12px; letter-spacing: .04em; }
+    .topbar .wrap { display: flex; justify-content: space-between; gap: 20px; padding: 10px 0; }
+    .topbar span:last-child { color: #d4dfd1; }
+    header { position: sticky; z-index: 10; top: 0; background: rgba(248,245,237,.94); border-bottom: 1px solid rgba(47,73,57,.09); backdrop-filter: blur(12px); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; font-size: 17px; font-weight: 700; letter-spacing: -.04em; }
+    .brand-mark { width: 36px; height: 36px; display: grid; place-items: center; color: white; background: var(--green); border-radius: 50% 50% 45% 45%; font-size: 18px; }
+    .brand small { display: block; margin-top: 2px; color: var(--muted); font-size: 9px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 34px; font-size: 13px; font-weight: 600; }
+    .nav-links a:not(.nav-cta):hover { color: var(--orange); }
+    .nav-cta, .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 13px 19px; border: 0; border-radius: 4px; background: var(--green); color: white; font-size: 12px; font-weight: 700; transition: background .2s, transform .2s; }
+    .nav-cta:hover, .button:hover { background: #20372a; transform: translateY(-1px); }
+    .menu-toggle { display: none; border: 0; background: transparent; color: var(--green); font-size: 25px; }
+    .cart-trigger { position: relative; display: inline-flex; align-items: center; gap: 9px; padding: 10px 14px; border: 1px solid #dfe7ed; border-radius: 999px; background: white; color: #17314f; font-size: 11px; font-weight: 700; }
+    .cart-trigger:hover { border-color: #e94932; color: #cf3725; }
+    .cart-trigger svg { width: 18px; height: 18px; }
+    .cart-count { min-width: 21px; height: 21px; display: inline-grid; place-items: center; padding: 0 5px; border-radius: 999px; background: #e94932; color: white; font-size: 10px; }
+
+    .hero { padding: 46px 0 74px; }
+    .hero-grid { display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: 62px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--orange); font-size: 10px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
+    .eyebrow::before { width: 23px; height: 1px; content: ""; background: currentColor; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: var(--serif); }
+    h1 { max-width: 520px; margin: 18px 0; font-size: clamp(42px, 5.2vw, 68px); font-weight: 600; line-height: 1.06; letter-spacing: -.045em; }
+    h1 em { color: var(--orange); font-weight: 600; }
+    .hero-copy { max-width: 430px; margin-bottom: 27px; color: var(--muted); font-size: 15px; line-height: 1.8; }
+    .hero-actions { display: flex; align-items: center; gap: 22px; }
+    .text-link { display: inline-flex; align-items: center; gap: 7px; color: var(--green); font-size: 12px; font-weight: 700; }
+    .text-link span { font-size: 17px; transition: transform .2s; }
+    .text-link:hover span { transform: translateX(4px); }
+    .hero-note { display: flex; align-items: center; gap: 12px; margin-top: 40px; color: var(--muted); font-size: 11px; }
+    .avatars { display: flex; padding-left: 4px; }
+    .avatars i { width: 28px; height: 28px; display: grid; place-items: center; margin-left: -4px; border: 2px solid var(--cream); border-radius: 50%; background: #d9b795; color: white; font-size: 10px; font-style: normal; }
+    .avatars i:nth-child(2) { background: #8d9f82; }
+    .avatars i:nth-child(3) { background: #cf8b65; }
+    .hero-photo { position: relative; min-height: 490px; }
+    .hero-photo > img { width: 100%; height: 490px; display: block; object-fit: cover; border-radius: 48% 48% 5px 5px; }
+    .photo-tag { position: absolute; right: -17px; bottom: 30px; width: 160px; padding: 17px; background: var(--paper); box-shadow: 0 15px 40px #27261d18; }
+    .photo-tag strong { display: block; margin-bottom: 4px; color: var(--green); font-family: var(--serif); font-size: 20px; }
+    .photo-tag span { color: var(--muted); font-size: 10px; }
+    .photo-stamp { position: absolute; top: 35px; left: -24px; width: 84px; height: 84px; display: grid; place-items: center; padding: 13px; border: 1px solid #fff9; border-radius: 50%; background: var(--orange); color: white; font-size: 9px; font-weight: 700; letter-spacing: .08em; line-height: 1.5; text-align: center; transform: rotate(-12deg); }
+
+    .trust { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #f3efe5; }
+    .trust-row { min-height: 106px; display: grid; grid-template-columns: repeat(4, 1fr); align-items: center; }
+    .trust-item { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 12px; border-right: 1px solid var(--line); }
+    .trust-item:last-child { border: 0; }
+    .trust-icon { color: var(--orange); font-size: 23px; }
+    .trust-item strong { display: block; font-size: 12px; }
+    .trust-item small { display: block; margin-top: 4px; color: var(--muted); font-size: 10px; }
+
+    .catalog {
+      position: relative;
+      padding: 90px 0 102px;
+      overflow: hidden;
+      background: #f2f7fb;
+    }
+    .catalog::before {
+      position: absolute;
+      top: 0;
+      right: -120px;
+      width: 360px;
+      height: 360px;
+      border: 1px solid #dfeaf1;
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+    .catalog > .wrap { position: relative; }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 30px; }
+    .section-heading h2, .about-copy h2, .contact-copy h2 { margin: 10px 0 0; font-size: clamp(34px, 4vw, 48px); font-weight: 600; letter-spacing: -.04em; line-height: 1.1; }
+    .section-heading p { max-width: 320px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .catalog-tools { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 27px; }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; }
+    .filter { padding: 10px 16px; border: 1px solid var(--line); border-radius: 30px; background: transparent; color: var(--muted); font-size: 11px; font-weight: 600; }
+    .filter:hover, .filter.active { border-color: var(--green); background: var(--green); color: white; }
+    .search { width: 210px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 3px; outline: none; background: var(--paper); font-size: 11px; }
+    .search:focus { border-color: var(--green); }
+    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+    .product-card { overflow: hidden; background: var(--paper); }
+    .product-image { position: relative; height: 220px; overflow: hidden; background: #ece5d7; }
+    .product-image img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .5s; }
+    .product-card:hover .product-image img { transform: scale(1.05); }
+    .product-info { padding: 17px 17px 18px; }
+    .product-info h3 { margin: 0 0 6px; font-size: 19px; font-weight: 600; }
+    .product-info p { min-height: 34px; margin: 0 0 15px; color: var(--muted); font-size: 10px; line-height: 1.6; }
+
+    .about { padding: 78px 0; background: var(--green); color: white; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 78px; }
+    .about-photo { position: relative; }
+    .about-photo img { width: 100%; height: 360px; display: block; object-fit: cover; }
+    .about-photo::after { position: absolute; inset: 14px -14px -14px 14px; z-index: 0; border: 1px solid #ffffff4a; content: ""; }
+    .about-photo img { position: relative; z-index: 1; }
+    .about-copy .eyebrow { color: #e6a47b; }
+    .about-copy h2 { max-width: 440px; margin-bottom: 19px; }
+    .about-copy p { max-width: 470px; color: #d5ddd3; font-size: 13px; line-height: 1.9; }
+    .about-points { display: grid; grid-template-columns: 1fr 1fr; gap: 17px 22px; margin-top: 28px; }
+    .about-point { display: flex; align-items: center; gap: 9px; color: #f4f3ec; font-size: 11px; }
+    .about-point span { color: #e6a47b; font-size: 16px; }
+
+    .contact { padding: 80px 0; }
+    .contact-panel { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 43px 48px; background: #eee8d9; }
+    .contact-copy h2 { max-width: 570px; margin: 10px 0 12px; font-size: clamp(30px, 4vw, 42px); }
+    .contact-copy p { margin: 0; color: var(--muted); font-size: 12px; }
+    .contact-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+    .contact-actions small { color: var(--muted); font-size: 9px; }
+    footer { padding: 29px 0; background: #222820; color: #e8e9df; }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    footer .brand small { color: #aeb8a9; }
+    footer p { margin: 0; color: #aeb8a9; font-size: 10px; }
+    .wrap { width: min(1200px, calc(100% - 56px)); }
+    .topbar { background: #14365a; color: white; font-size: 11px; }
+    .topbar .wrap { padding: 9px 0; }
+    header { background: rgba(255,250,240,.94); border-bottom-color: #e8dfd0; }
+    .nav { min-height: 82px; }
+    .brand { gap: 12px; color: #23334a; font-size: 12px; letter-spacing: 0; }
+    .brand-mark { width: 112px; height: 55px; border-radius: 0; background: transparent; }
+    .brand-mark img { width: 100%; height: 100%; object-fit: contain; }
+    .brand small { margin-top: 4px; color: #697386; font-size: 9px; letter-spacing: .12em; }
+    .nav-links { gap: 31px; font-size: 12px; }
+    .nav-links a:not(.nav-cta):hover { color: var(--orange); }
+    .nav-cta, .button { padding: 14px 20px; border-radius: 999px; background: var(--orange); font-size: 12px; box-shadow: 0 8px 18px #e9493224; }
+    .nav-cta:hover, .button:hover { background: #cf3725; transform: translateY(-2px); }
+    .menu-toggle { color: var(--green); }
+
+    .hero { position: relative; overflow: hidden; padding: 66px 0 76px; }
+    .hero::before { position: absolute; top: -220px; right: -155px; width: 550px; height: 550px; border-radius: 50%; background: #ffe9a8; content: ""; }
+    .hero-grid { position: relative; grid-template-columns: 1fr 1fr; gap: 72px; }
+    .hero .eyebrow { color: var(--orange); font-size: 10px; }
+    h1 { max-width: 580px; margin: 20px 0 17px; color: #17314f; font-size: clamp(48px, 6vw, 78px); font-weight: 800; line-height: .99; letter-spacing: -.07em; }
+    h1 em { color: var(--orange); font-style: normal; }
+    .hero-copy { max-width: 465px; margin-bottom: 27px; color: #536378; font-size: 14px; line-height: 1.8; }
+    .hero-actions { gap: 20px; }
+    .text-link { color: var(--green); font-size: 12px; }
+    .hero-note { margin-top: 34px; color: #5e6a7c; font-size: 10px; }
+    .avatars i { border-color: #fff8e9; background: #f2b830; }
+    .avatars i:nth-child(2) { background: #e94932; }
+    .avatars i:nth-child(3) { background: #3994ae; }
+    .hero-photo { min-height: 470px; display: grid; place-items: center; padding: 26px; border: 1px solid #f1dfaa; border-radius: 40% 40% 28px 28px; background: linear-gradient(150deg,#ffdf71 0%,#ffbe54 100%); }
+    .hero-photo > img { width: min(100%, 410px); height: auto; aspect-ratio: 1; border-radius: 24px; object-fit: cover; box-shadow: 0 22px 50px #80491c30; }
+    .photo-tag { right: -20px; bottom: 25px; width: 173px; padding: 17px 19px; border-radius: 14px; box-shadow: 0 15px 40px #27261d20; }
+    .photo-tag strong { color: var(--green); font-family: var(--sans); font-size: 17px; font-weight: 800; }
+    .photo-tag span { font-size: 10px; line-height: 1.5; }
+    .photo-stamp { top: 21px; left: -28px; width: 78px; height: 78px; background: var(--green); font-size: 8px; }
+
+    .trust { border: 0; background: #14365a; color: white; }
+    .trust-row { min-height: 100px; }
+    .trust-item { justify-content: flex-start; border-color: #ffffff22; }
+    .trust-icon { color: #ffcd52; }
+    .trust-item strong { font-size: 11px; }
+    .trust-item small { color: #c6d6e5; }
+
+    .catalog {
+      position: relative;
+      padding: 90px 0 102px;
+      overflow: hidden;
+      background: #f2f7fb;
+    }
+    .catalog::before {
+      position: absolute;
+      top: 0;
+      right: -120px;
+      width: 360px;
+      height: 360px;
+      border: 1px solid #dfeaf1;
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+    .catalog > .wrap { position: relative; }
+    .section-heading { align-items: flex-end; margin-bottom: 31px; }
+    .section-heading h2, .about-copy h2, .contact-copy h2 { color: #17314f; font-size: clamp(36px, 4.5vw, 54px); font-weight: 800; letter-spacing: -.06em; }
+    .section-heading p { max-width: 345px; font-size: 12px; }
+    .catalog-tools {
+      align-items: center;
+      margin: 34px 0 12px;
+      padding: 15px;
+      border: 1px solid #e4ebf0;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 6px 20px #17314f08;
+    }
+    .filter { border-color: #e5dfd3; border-radius: 999px; background: white; color: #58667a; font-size: 10px; }
+    .filter:hover, .filter.active { border-color: var(--green); background: var(--green); }
+    .search { width: 230px; padding: 12px 15px; border-color: #e5dfd3; border-radius: 999px; font-size: 11px; }
+    .product-grid { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 25px; }
+    .product-card {
+      border: 1px solid #e8edf1;
+      border-radius: 20px;
+      background: white;
+      box-shadow: 0 10px 28px #26384a0b;
+      transition: transform .22s, box-shadow .22s;
+    }
+    .product-card:hover { box-shadow: 0 18px 38px #26384a18; transform: translateY(-5px); }
+    .product-image {
+      height: auto;
+      aspect-ratio: 1;
+      padding: 10px;
+      border-radius: 19px 19px 0 0;
+      background: #f7f5ef;
+    }
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      image-rendering: auto;
+    }
+    .product-info { padding: 16px 17px 17px; }
+    .product-info h3 { min-height: 42px; margin-bottom: 6px; color: #17314f; font-family: var(--sans); font-size: 16px; font-weight: 700; }
+    .product-info p { min-height: 40px; margin-bottom: 13px; font-size: 11px; }
+    .product-category {
+      align-self: flex-start;
+      margin-bottom: 9px;
+      padding: 5px 9px;
+      border: 1px solid #e3edf3;
+      border-radius: 999px;
+      background: #f5fafc;
+      color: #4a6378;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .03em;
+    }
+    .product-actions { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 5px; margin-top: 12px; padding-top: 10px; border-top: 1px solid #eee8dd; }
+    .product-actions .add-to-cart { min-height: 38px; padding: 8px 11px; border-radius: 999px; font-size: 10px; }
+    .product-actions .detail-button { min-height: 38px; padding: 5px 7px; border: 0; background: transparent; color: var(--orange); font-size: 10px; font-weight: 700; }
+    .product-actions .detail-button:hover { color: #b93020; }
+    .cart-toast { position: fixed; right: 20px; bottom: calc(24px + 54px + 14px); z-index: 25; max-width: min(370px, calc(100% - 40px)); padding: 13px 17px; border-radius: 12px; background: #14365a; color: white; box-shadow: 0 14px 35px #102b4930; font-size: 12px; opacity: 0; pointer-events: none; transform: translateY(10px); transition: opacity .2s, transform .2s; }
+    .cart-toast.show { opacity: 1; transform: translateY(0); }
+    .cart-drawer {
+      width: min(480px, 100%);
+      max-width: none;
+      height: 100dvh;
+      max-height: 100dvh;
+      margin: 0 0 0 auto;
+      padding: 0;
+      overflow: auto;
+      border: 0;
+      border-radius: 20px 0 0 20px;
+      background: #fffdf8;
+      color: #17314f;
+      box-shadow: -20px 0 70px #102b4930;
+    }
+    .cart-drawer::backdrop { background: #10243b99; backdrop-filter: blur(3px); }
+    .cart-header { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 20px 22px; border-bottom: 1px solid #e8edf1; background: #fffdf8ee; backdrop-filter: blur(10px); }
+    .cart-header h2 { margin: 0; color: #17314f; font-family: var(--sans); font-size: 20px; font-weight: 800; }
+    .cart-close { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid #dfe7ed; border-radius: 50%; background: white; color: #17314f; font-size: 21px; }
+    .cart-body { padding: 20px 22px 26px; }
+    .cart-notice { margin-bottom: 14px; color: #a53b2b; font-size: 11px; line-height: 1.5; }
+    .cart-empty { padding: 40px 12px; color: #657487; text-align: center; }
+    .cart-empty strong { display: block; margin-bottom: 7px; color: #17314f; font-size: 16px; }
+    .cart-empty p { margin: 0 0 17px; font-size: 12px; }
+    .cart-empty .button { min-height: 44px; }
+    .cart-items { display: grid; gap: 12px; }
+    .cart-item { display: grid; grid-template-columns: 64px minmax(0,1fr) auto; align-items: center; gap: 12px; padding: 11px; border: 1px solid #e8edf1; border-radius: 14px; background: white; }
+    .cart-item img { width: 64px; height: 64px; border-radius: 10px; background: #f7f5ef; object-fit: contain; }
+    .cart-item h3 { margin: 0 0 4px; color: #17314f; font-family: var(--sans); font-size: 12px; line-height: 1.4; }
+    .cart-item small { color: #647184; font-size: 10px; }
+    .cart-quantity { margin-top: 9px; }
+    .cart-item-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .cart-unit-label { display: inline-flex; align-items: center; gap: 6px; margin: 0; color: #647184; font-size: 10px; }
+    .cart-unit-select { min-height: 34px; padding: 5px 24px 5px 8px; border: 1px solid #dfe7ed; border-radius: 8px; background: white; color: #17314f; font: 11px var(--sans); }
+    .cart-item-controls button { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid #dfe7ed; border-radius: 50%; background: white; color: #17314f; font-size: 16px; }
+    .cart-item-controls output { min-width: 20px; color: #17314f; font-size: 12px; font-weight: 700; text-align: center; }
+    .cart-remove { align-self: start; padding: 5px; border: 0; background: transparent; color: #9c4a3e; font-size: 10px; }
+    .cart-remove:hover { text-decoration: underline; }
+    .cart-summary { margin-top: 18px; padding-top: 17px; border-top: 1px solid #e5ebef; }
+    .cart-summary p { margin: 0 0 7px; color: #17314f; font-size: 12px; }
+    .cart-summary .cart-price-note { margin: 0 0 14px; color: #657487; font-size: 10px; line-height: 1.6; }
+    .cart-checkout { width: 100%; min-height: 46px; }
+    .cart-clear { width: 100%; margin-top: 8px; padding: 9px; border: 0; background: transparent; color: #8d4036; font-size: 11px; font-weight: 700; }
+    .order-summary { margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5ebef; }
+    .order-summary label { display: block; margin-bottom: 7px; color: #17314f; font-size: 11px; font-weight: 700; }
+    .request-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; margin: 0 0 14px; }
+    .request-fields label { margin: 0; }
+    .request-fields input, .request-fields select, .request-fields textarea { width: 100%; min-height: 43px; margin-top: 6px; padding: 10px 12px; border: 1px solid #dfe7ed; border-radius: 9px; background: white; color: #27394f; font: 12px var(--sans); }
+    .request-fields textarea { min-height: 76px; resize: vertical; }
+    .request-fields label:last-child { grid-column: 1 / -1; }
+    .request-fields input:focus, .request-fields select:focus, .request-fields textarea:focus { outline: 2px solid #93bed0; outline-offset: 1px; }
+    .contact-followup { margin: 0 0 12px; color: #657487; font-size: 10px; line-height: 1.5; }
+    .order-summary textarea { width: 100%; min-height: 150px; padding: 12px; border: 1px solid #dfe7ed; border-radius: 10px; background: white; color: #27394f; font: 11px/1.6 var(--sans); resize: vertical; }
+    .order-summary p { margin: 8px 0 0; color: #647184; font-size: 10px; line-height: 1.5; }
+    .copy-order { width: 100%; min-height: 44px; margin-top: 10px; border: 1px solid #dfe7ed; border-radius: 999px; background: white; color: #17314f; font-size: 11px; font-weight: 700; }
+    .cart-status { min-height: 20px; margin: 10px 0 0; color: #315a46; font-size: 11px; line-height: 1.5; }
+    .about { overflow: hidden; padding: 82px 0; background: #e7f5fb; color: var(--ink); }
+    .about-grid { grid-template-columns: .9fr 1.1fr; gap: 78px; }
+    .about-photo img { height: 390px; border-radius: 20px; object-fit: cover; }
+    .about-photo::after { inset: 14px -14px -14px 14px; border-color: #f0ad42; border-radius: 20px; }
+    .about-copy .eyebrow { color: var(--orange); }
+    .about-copy h2 { max-width: 510px; margin-bottom: 18px; }
+    .about-copy p { color: #586b80; font-size: 13px; }
+    .about-point { color: #263d58; font-size: 11px; }
+    .about-point span { color: var(--orange); }
+
+    .contact { padding: 76px 0; }
+    .contact-panel { overflow: hidden; position: relative; padding: 48px; border-radius: 22px; background: #ffe18a; }
+    .contact-panel::after { position: absolute; right: 165px; bottom: -155px; width: 330px; height: 330px; border: 38px solid #ffffff36; border-radius: 50%; content: ""; }
+    .contact-copy, .contact-actions { position: relative; z-index: 1; }
+    .contact-copy h2 { max-width: 590px; font-size: clamp(33px,4vw,47px); }
+    .contact-copy p { color: #5b6270; }
+    .contact-actions { align-items: flex-start; flex: 0 0 auto; }
+    .contact-actions small { max-width: 245px; line-height: 1.6; }
+    .info-sections { padding: 18px 0 78px; }
+    .info-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .info-card { padding: 28px; border: 1px solid #e1e9ee; border-radius: 20px; background: white; box-shadow: 0 12px 30px #17314f0a; }
+    .info-card .eyebrow { margin-bottom: 12px; }
+    .info-card h2 { margin: 0 0 10px; color: #17314f; font-family: var(--sans); font-size: clamp(23px, 3vw, 30px); font-weight: 800; letter-spacing: -.04em; }
+    .info-card p { margin: 0 0 17px; color: #647184; font-size: 12px; line-height: 1.7; }
+    .info-card .button { min-height: 44px; border-radius: 999px; }
+    .info-contact { margin: 12px 0 0 !important; font-size: 12px !important; }
+    .order-text-label { margin-top: 14px; }
+    .info-card .button svg, .whatsapp-float svg { width: 21px; height: 21px; flex: 0 0 auto; }
+    .whatsapp-float {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 20;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 19px;
+      border: 2px solid white;
+      border-radius: 999px;
+      background: #168b52;
+      color: white;
+      box-shadow: 0 12px 30px #143b2c40;
+      font-size: 12px;
+      font-weight: 700;
+      transition: background .2s, transform .2s;
+    }
+    .whatsapp-float:hover { background: #0e7040; transform: translateY(-2px); }
+    .whatsapp-float:focus-visible { outline: 3px solid #17314f; outline-offset: 3px; }
+    .request-whatsapp { width: 100%; min-height: 46px; margin-top: 9px; border: 0; border-radius: 999px; background: #168b52; color: white; font-size: 11px; font-weight: 700; }
+    .request-whatsapp:hover { background: #0e7040; }
+
+    footer { background: #102b49; }
+    footer .brand { color: white; }
+    footer .brand small { color: #cad7e4; }
+    footer p { color: #b6c7d7; }
+
+    @media (max-width: 900px) {
+      .hero-grid { gap: 38px; }
+      .hero-photo { min-height: 380px; }
+      .hero-photo > img { height: auto; }
+      .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .about-grid { gap: 46px; }
+      .contact-panel { align-items: flex-start; }
+      .info-grid { grid-template-columns: 1fr; }
+      .info-card { padding: 23px; }
+      .whatsapp-float { right: 15px; bottom: 15px; min-height: 50px; padding: 0 15px; }
+    }
+    @media (max-width: 650px) {
+      .wrap { width: min(100% - 32px, 520px); }
+      .topbar { font-size: 11px; }
+      .topbar .wrap { justify-content: center; text-align: center; }
+      .topbar span:last-child { display: none; }
+      .nav { min-height: 72px; }
+      .brand-mark { width: 96px; height: 49px; }
+      .nav-links { position: absolute; top: 71px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 10px 24px 20px; border-bottom: 1px solid var(--line); background: #fffaf0; box-shadow: 0 16px 24px #102b4912; }
+      .nav-links.open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 12px 0; color: #17314f; }
+      .nav-links .nav-cta { margin-top: 5px; padding: 12px; }
+      .nav-links .cart-trigger { justify-content: flex-start; margin-top: 8px; padding: 12px 14px; }
+      .menu-toggle { display: grid; }
+      .hero { padding: 48px 0 56px; }
+      .hero::before { top: 330px; right: -190px; width: 360px; height: 360px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 38px; }
+      h1 { max-width: 440px; font-size: clamp(50px, 14vw, 66px); }
+      .hero-copy { font-size: 13px; }
+      .hero-note { margin-top: 27px; }
+      .hero-photo { min-height: 0; margin: 0 14px 0 9px; padding: 18px; border-radius: 38% 38% 22px 22px; }
+      .hero-photo > img { width: 100%; max-width: 360px; }
+      .photo-stamp { left: -20px; width: 70px; height: 70px; font-size: 10px; }
+      .photo-tag { right: -10px; bottom: 16px; }
+      .trust-row { grid-template-columns: 1fr 1fr; padding: 9px 0; }
+      .trust-item { justify-content: flex-start; gap: 9px; padding: 12px 7px; border: 0; }
+      .trust-icon { font-size: 19px; }
+      .trust-item strong { font-size: 12px; }
+      .trust-item small { font-size: 11px; }
+      .catalog { padding: 66px 0 72px; }
+      .catalog-tools { align-items: stretch; flex-direction: column; gap: 14px; margin-top: 23px; padding: 13px; }
+      .product-grid { gap: 13px; }
+      .product-image { height: auto; padding: 6px; }
+      .product-info { padding: 13px; }
+      .product-info h3 { min-height: 38px; font-size: 14px; }
+      .product-info p { min-height: 45px; font-size: 12px; }
+      .product-category { padding: 4px 7px; font-size: 11px; }
+      .product-actions .add-to-cart, .product-actions .detail-button { font-size: 11px; }
+      .hero-note, .photo-tag span { font-size: 11px; }
+      .section-heading { align-items: flex-start; flex-direction: column; gap: 13px; }
+      .section-heading p, .contact-copy p, .about-copy p, .info-card p { font-size: 13px; }
+      .contact-actions small, .info-card > p:last-child { font-size: 12px; }
+      .brand small { font-size: 11px; }
+      .eyebrow { font-size: 11px; }
+      .footer-links, footer p { font-size: 12px; }
+      .filters { gap: 7px; }
+      .filter { min-height: 40px; padding: 9px 13px; font-size: 12px; }
+      .search { width: 100%; min-height: 46px; }
+      .cart-toast { right: 15px; bottom: calc(15px + 50px + 12px); max-width: min(370px, calc(100% - 30px)); }
+      .cart-item small, .cart-remove, .cart-summary .cart-price-note, .contact-followup, .order-summary p { font-size: 12px; }
+      .order-summary label, .cart-clear, .copy-order { font-size: 12px; }
+      .cart-notice, .cart-status, .catalog-status, .about-point { font-size: 12px; }
+      .detail-category { font-size: 12px; }
+      .about { padding: 58px 0; }
+      .about-grid { grid-template-columns: 1fr; gap: 38px; }
+      .about-photo img { height: 270px; }
+      .contact { padding: 54px 0; }
+      .contact-panel { align-items: flex-start; flex-direction: column; gap: 24px; padding: 30px 24px; border-radius: 17px; }
+      .contact-panel::after { right: -70px; }
+      .contact-actions { width: 100%; }
+      .contact-actions small { max-width: 100%; }
+      .footer-row { align-items: flex-start; flex-direction: column; gap: 13px; }
+      .footer-links { gap: 13px; }
+      footer p { max-width: 100%; }
+      .product-detail { border-radius: 16px; }
+      .detail-content { padding: 19px; }
+      .cart-drawer { border-radius: 16px 0 0 16px; }
+      .cart-header { padding: 16px; }
+      .cart-body { padding: 16px 14px 24px; }
+    }
+    @media (max-width: 420px) {
+      .product-grid { grid-template-columns: 1fr 1fr; }
+      .request-fields { grid-template-columns: 1fr; }
+      .request-fields label:last-child { grid-column: auto; }
+      .product-image { height: auto; }
+      .product-info p { min-height: 0; }
+      .hero-actions { align-items: flex-start; flex-direction: row; gap: 13px; }
+      .hero-actions .button { padding: 12px 15px; }
+      .product-actions { grid-template-columns: minmax(0, 1fr); }
+      .product-actions .add-to-cart { width: 100%; min-width: 0; white-space: normal; line-height: 1.3; }
+      .product-actions .detail-button { justify-self: end; }
+    }
+    img { max-width: 100%; }
+    button, a, input { -webkit-tap-highlight-color: transparent; }
+    a:focus-visible, button:focus-visible, input:focus-visible, dialog:focus-visible {
+      outline: 3px solid #ed9c36;
+      outline-offset: 3px;
+    }
+    .skip-link {
+      position: fixed;
+      top: 8px;
+      left: 8px;
+      z-index: 30;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: #14365a;
+      color: white;
+      transform: translateY(-150%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      clip-path: inset(50%);
+      border: 0;
+    }
+    .filter { min-height: 42px; }
+    .filter[aria-pressed="true"] { border-color: var(--green); background: var(--green); color: white; }
+    .catalog-status { min-height: 24px; margin: -7px 0 15px; color: #647184; font-size: 11px; }
+    .empty-state { grid-column: 1 / -1; padding: 42px 22px; border: 1px dashed #d8dfe5; border-radius: 16px; background: white; text-align: center; }
+    .empty-state p { margin-bottom: 14px; }
+    .empty-state button { padding: 9px 14px; border: 1px solid #d5dce3; border-radius: 999px; background: white; color: #17314f; font-size: 11px; font-weight: 700; }
+    .product-info { display: flex; flex: 1; flex-direction: column; }
+    .product-card { display: flex; flex-direction: column; }
+    .product-image { width: 100%; }
+    .product-image img { aspect-ratio: 1; }
+    .product-detail {
+      width: min(460px, calc(100% - 32px));
+      max-width: none;
+      max-height: min(90vh, 760px);
+      padding: 0;
+      overflow: auto;
+      border: 0;
+      border-radius: 20px;
+      background: #fffdf8;
+      color: #17314f;
+      box-shadow: 0 24px 80px #102b4940;
+    }
+    .product-detail::backdrop { background: #10243bcc; backdrop-filter: blur(4px); }
+    .product-detail img { width: 100%; display: block; aspect-ratio: 1; object-fit: cover; background: #edf2f5; }
+    .detail-content { padding: 23px; }
+    .detail-category { display: block; margin-bottom: 8px; color: #d44431; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .detail-content h2 { margin: 0 0 8px; font-size: 27px; font-weight: 800; letter-spacing: -.04em; }
+    .detail-content p { margin-bottom: 20px; color: #647184; font-size: 13px; }
+    .detail-actions { display: flex; align-items: center; gap: 12px; }
+    .detail-close { min-height: 44px; padding: 11px 16px; border: 1px solid #d5dce3; border-radius: 999px; background: transparent; color: #17314f; font-size: 11px; font-weight: 700; }
+    .detail-actions .button { min-height: 44px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; color: #d2deea; font-size: 10px; }
+    .footer-links a:hover { color: white; text-decoration: underline; text-underline-offset: 3px; }
+    .menu-toggle { width: 44px; height: 44px; display: none; place-items: center; border-radius: 50%; }
+    .menu-toggle:hover { background: #e7f5fb; }
+    .menu-toggle svg { width: 22px; height: 22px; }
+    .menu-toggle .icon-close { display: none; }
+    .menu-toggle[aria-expanded="true"] .icon-menu { display: none; }
+    .menu-toggle[aria-expanded="true"] .icon-close { display: block; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#konten">Langsung ke isi halaman</a>
+  <div class="topbar">
+    <div class="wrap"><span>Nikmat di mulut, ringan di saku!</span><span>Friends Bakery · PT Pangan Mekar Jaya</span></div>
+  </div>
+  <header>
+    <nav class="wrap nav" aria-label="Navigasi utama">
+      <a class="brand" href="#top" aria-label="Friends Bakery, halaman utama">
+        <span class="brand-mark"><img src="assets/logo_friend_bakery-removebg-preview-2.png" alt="Friends Bakery"></span>
+        <span>Friends Bakery<small>Roti Nana · sejak 1980</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="icon-menu" d="M4 7h16M4 12h16M4 17h16"></path><path class="icon-close" d="m6 6 12 12M18 6 6 18"></path></svg>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#katalog">Produk</a>
+        <a href="#tentang">Tentang Kami</a>
+        <a href="#kontak">Kontak</a>
+        <a href="#karir">Karir</a>
+        <button class="nav-cta cart-trigger" type="button" data-open-cart aria-label="Buka permintaan grosir, 0 jenis produk dipilih">
+          Permintaan grosir
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 2-1.6L21 8H6"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>
+          <span class="cart-count" aria-live="polite">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="konten">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Sahabat di setiap meja makan</span>
+          <h1>Nikmat di mulut, <em>ringan di saku.</em></h1>
+          <p class="hero-copy">Temukan aneka roti Nana yang lezat untuk menemani hari. Diproduksi oleh Friends Bakery, bagian dari PT Pangan Mekar Jaya, sejak 1980.</p>
+          <div class="hero-actions">
+            <a class="button" href="#katalog">Jelajahi produk <span>↓</span></a>
+            <a class="text-link" href="#tentang">Cerita kami <span>→</span></a>
+          </div>
+          <div class="hero-note">
+            <span class="avatars" aria-hidden="true"><i>✓</i><i>✓</i><i>✓</i></span>
+            <span>Menghadirkan roti untuk keluarga Indonesia sejak 1980</span>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/roti-nana-2-rasa-coklat-strawberry.png" alt="Kemasan Roti Nana rasa cokelat dan strawberry" fetchpriority="high" width="1080" height="1080">
+          <div class="photo-stamp" aria-hidden="true">NIKMAT<br>DI MULUT<br>RINGAN DI SAKU</div>
+          <div class="photo-tag"><strong>Roti Nana</strong><span>Teman lezat di setiap suasana</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" aria-label="Keunggulan Roti Nana">
+      <div class="wrap trust-row">
+        <div class="trust-item"><span class="trust-icon">✳</span><span><strong>Sejak 1980</strong><small>Pengalaman lebih dari 45 tahun</small></span></div>
+        <div class="trust-item"><span class="trust-icon">⌖</span><span><strong>Asli Sidoarjo</strong><small>Jawa Timur, Indonesia</small></span></div>
+        <div class="trust-item"><span class="trust-icon">♡</span><span><strong>Rasa untuk semua</strong><small>Nikmat dan terjangkau</small></span></div>
+        <div class="trust-item"><span class="trust-icon">✦</span><span><strong>Sahabat keluarga</strong><small>Teman di setiap meja makan</small></span></div>
+      </div>
+    </section>
+
+    <section class="catalog" id="katalog">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><span class="eyebrow">Kenalan dengan favoritmu</span><h2>Roti enak, banyak pilihan.</h2></div>
+          <p>Lihat pilihan Roti Nana 2 Rasa dan Roti Nana Krim. Foto kemasan asli ditampilkan utuh agar setiap detailnya terlihat.</p>
+        </div>
+        <div class="catalog-tools">
+          <div class="filters" role="group" aria-label="Filter kategori produk">
+            <button class="filter active" type="button" data-category="Semua" aria-pressed="true">Semua produk</button>
+            <button class="filter" type="button" data-category="Roti 2 Rasa" aria-pressed="false">Roti 2 rasa</button>
+            <button class="filter" type="button" data-category="Roti Krim" aria-pressed="false">Roti krim</button>
+          </div>
+          <label class="sr-only" for="product-search">Cari nama atau kategori produk</label>
+          <input class="search" id="product-search" type="search" placeholder="Cari nama atau kategori..." autocomplete="off" aria-controls="product-grid">
+        </div>
+        <p class="catalog-status" role="status" aria-live="polite"></p>
+        <div class="product-grid" id="product-grid"></div>
+      </div>
+    </section>
+
+    <section class="about" id="tentang">
+      <div class="wrap about-grid">
+        <div class="about-photo"><img src="assets/produk-nana-pattern.jpeg" alt="Pola kemasan aneka rasa roti Nana" loading="lazy" width="2000" height="1200"></div>
+        <div class="about-copy">
+          <span class="eyebrow">Friends Bakery · PT Pangan Mekar Jaya</span>
+          <h2>Lebih dari empat dekade berbagi kelezatan.</h2>
+          <p>Berawal pada 1980 di Sidoarjo, Jawa Timur, Friends Bakery terus menghadirkan roti yang lezat dan ramah di kantong. Roti Nana adalah sahabat setia di setiap meja makan—untuk dinikmati bersama, setiap hari.</p>
+          <div class="about-points">
+            <div class="about-point"><span>✓</span> Berdiri sejak 1980</div>
+            <div class="about-point"><span>✓</span> Berbasis di Sidoarjo</div>
+            <div class="about-point"><span>✓</span> Ragam rasa favorit</div>
+            <div class="about-point"><span>✓</span> Nikmat untuk seluruh keluarga</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="kemitraan">
+      <div class="wrap contact-panel">
+        <div class="contact-copy">
+          <span class="eyebrow">Yuk, kenalan lebih dekat</span>
+          <h2>Pasokan roti untuk usahamu.</h2>
+          <p>Pilih produk dalam satuan dus dan ajukan permintaan penawaran grosir. Harga, jumlah minimum, dan pengiriman dikonfirmasi langsung oleh tim kami.</p>
+        </div>
+        <div class="contact-actions">
+          <button class="button" type="button" data-open-cart>Mulai permintaan grosir <span>→</span></button>
+          <small>Untuk toko, reseller, dan pembelian usaha · Friends Bakery</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-sections" aria-label="Informasi kontak dan karir">
+      <div class="wrap info-grid">
+        <article class="info-card" id="kontak">
+          <span class="eyebrow">Kontak Friends Bakery</span>
+          <h2>Mari bicara dengan tim kami.</h2>
+          <p>Hubungi kami melalui WhatsApp untuk informasi produk, kemitraan, dan permintaan penawaran grosir.</p>
+          <a class="button" href="https://wa.me/6282138315474?text=Halo%20Friends%20Bakery%2C%20saya%20ingin%20bertanya%20tentang%20produk%20dan%20penawaran%20grosir." target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="currentColor" d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .1 5.4.1 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.6a12 12 0 0 0 5.8 1.5h.1c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.7-8.4ZM12.1 21.9a10 10 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.6-.3-.4A9.8 9.8 0 0 1 2.1 12c0-5.5 4.5-10 10-10 2.7 0 5.2 1 7.1 2.9a9.9 9.9 0 0 1 2.9 7.1c0 5.5-4.5 9.9-10 9.9Zm5.5-7.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-1-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/></svg>
+            Chat WhatsApp
+          </a>
+          <p class="info-contact">WhatsApp: +62 821-3831-5474</p>
+        </article>
+        <article class="info-card" id="karir">
+          <span class="eyebrow">Karir</span>
+          <h2>Berkembang bersama kami.</h2>
+          <p>Ingin bergabung dengan Friends Bakery? Hubungi tim kami melalui WhatsApp untuk menanyakan informasi dan peluang karir terbaru.</p>
+          <a class="button" href="https://wa.me/6282138315474?text=Halo%20Friends%20Bakery%2C%20saya%20ingin%20bertanya%20tentang%20peluang%20karir." target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="currentColor" d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .1 5.4.1 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.6a12 12 0 0 0 5.8 1.5h.1c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.7-8.4ZM12.1 21.9a10 10 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.6-.3-.4A9.8 9.8 0 0 1 2.1 12c0-5.5 4.5-10 10-10 2.7 0 5.2 1 7.1 2.9a9.9 9.9 0 0 1 2.9 7.1c0 5.5-4.5 9.9-10 9.9Zm5.5-7.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-1-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/></svg>
+            Tanya peluang karir
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <a class="brand" href="#top" aria-label="Kembali ke atas — Friends Bakery"><span class="brand-mark"><img src="assets/logo_friend_bakery-removebg-preview-2.png" alt=""></span><span>Roti Nana<small>Friends Bakery · sejak 1980</small></span></a>
+      <nav class="footer-links" aria-label="Tautan cepat">
+        <a href="#katalog">Katalog produk</a>
+        <a href="#tentang">Tentang kami</a>
+        <a href="#kemitraan">Permintaan grosir</a>
+        <a href="#kontak">Kontak</a>
+        <a href="#karir">Karir</a>
+      </nav>
+      <p>© <span id="current-year">2026</span> Friends Bakery — PT Pangan Mekar Jaya.</p>
+    </div>
+  </footer>
+  <a class="whatsapp-float" href="https://wa.me/6282138315474?text=Halo%20Friends%20Bakery%2C%20saya%20ingin%20bertanya." target="_blank" rel="noopener noreferrer" aria-label="Chat Friends Bakery melalui WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="currentColor" d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .1 5.4.1 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.6a12 12 0 0 0 5.8 1.5h.1c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.7-8.4ZM12.1 21.9a10 10 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.6-.3-.4A9.8 9.8 0 0 1 2.1 12c0-5.5 4.5-10 10-10 2.7 0 5.2 1 7.1 2.9a9.9 9.9 0 0 1 2.9 7.1c0 5.5-4.5 9.9-10 9.9Zm5.5-7.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-1-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/></svg>
+    <span>Chat WhatsApp</span>
+  </a>
+  <dialog class="cart-drawer" aria-labelledby="cart-title" aria-describedby="cart-description">
+    <div class="cart-header">
+      <h2 id="cart-title">Permintaan penawaran grosir</h2>
+      <button class="cart-close" type="button" data-close-cart aria-label="Tutup permintaan grosir">×</button>
+    </div>
+    <div class="cart-body">
+      <p class="cart-notice" id="cart-notice" hidden></p>
+      <div class="cart-items" aria-label="Daftar produk yang dipilih"></div>
+      <div class="cart-empty" hidden>
+        <strong>Belum ada produk dipilih</strong>
+        <p>Pilih produk, jumlah, dan satuan yang ingin ditanyakan.</p>
+        <a class="button" href="#katalog" data-browse-products>Lihat produk</a>
+      </div>
+      <p class="cart-status" role="status" aria-live="polite"></p>
+      <section class="cart-summary" aria-label="Ringkasan permintaan grosir" hidden>
+        <p><strong>Jumlah terpilih: <span class="cart-unit-total">-</span></strong></p>
+        <p class="cart-price-note" id="cart-description">Harga, minimum pemesanan, stok, dan biaya kirim akan dikonfirmasi oleh tim penjualan. Ini permintaan penawaran, bukan checkout.</p>
+        <button class="button cart-checkout" type="button" data-start-request>Isi detail permintaan</button>
+        <button class="cart-clear" type="button" data-clear-cart>Kosongkan pilihan</button>
+        <div class="order-summary" hidden>
+          <p class="contact-followup">Ringkasan ini disiapkan untuk dikirim ke WhatsApp Friends Bakery. Periksa detailnya sebelum Anda mengirim.</p>
+          <div class="request-fields">
+            <label for="business-name">Nama toko/perusahaan
+              <input id="business-name" type="text" maxlength="80" autocomplete="organization" required>
+            </label>
+            <label for="contact-person">Nama penanggung jawab
+              <input id="contact-person" type="text" maxlength="80" autocomplete="name" required>
+            </label>
+            <label for="customer-contact">Kontak Anda (WhatsApp/telepon/email)
+              <input id="customer-contact" type="text" maxlength="120" autocomplete="tel" required>
+            </label>
+            <label for="business-city">Kota/kabupaten
+              <input id="business-city" type="text" maxlength="80" autocomplete="address-level2">
+            </label>
+            <label for="buyer-type">Jenis usaha/pembeli
+              <select id="buyer-type">
+                <option value="">Pilih jenis usaha</option>
+                <option value="Toko/Warung">Toko/Warung</option>
+                <option value="Agen/Distributor/Reseller">Agen/Distributor/Reseller</option>
+                <option value="Katering/Instansi">Katering/Instansi</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </label>
+            <label for="delivery-plan">Rencana pengiriman
+              <select id="delivery-plan">
+                <option value="">Pilih rencana pengiriman</option>
+                <option value="Dikirim ke alamat">Dikirim ke alamat</option>
+                <option value="Ambil langsung / koordinasi pabrik">Ambil langsung / koordinasi pabrik</option>
+              </select>
+            </label>
+            <label for="additional-notes">Catatan tambahan (opsional)
+              <textarea id="additional-notes" maxlength="300" rows="3" placeholder="Misalnya frekuensi order atau informasi lain"></textarea>
+            </label>
+          </div>
+          <button class="button cart-checkout" type="button" data-prepare-order>Buat ringkasan permintaan</button>
+          <label class="order-text-label" for="order-text">Ringkasan permintaan untuk disalin</label>
+          <textarea id="order-text" readonly></textarea>
+          <button class="copy-order" type="button" data-copy-order>Salin permintaan</button>
+          <a class="request-whatsapp" id="send-request-whatsapp" href="https://wa.me/6282138315474" target="_blank" rel="noopener noreferrer">
+            Kirim permintaan lewat WhatsApp
+          </a>
+          <p>WhatsApp akan dibuka dengan ringkasan dan detail kontak yang Anda isi. Periksa pesannya sebelum mengirim; permintaan belum menjadi pesanan.</p>
+        </div>
+      </section>
+    </div>
+  </dialog>
+  <dialog class="product-detail" aria-labelledby="detail-title">
+    <img class="detail-image" src="assets/roti-nana-2-rasa-coklat-pandan.png" alt="Kemasan produk Roti Nana" width="1080" height="1080">
+    <div class="detail-content">
+      <span class="detail-category"></span>
+      <h2 id="detail-title"></h2>
+      <p class="detail-description"></p>
+      <div class="detail-actions">
+        <button class="button detail-add" type="button">Tambah 1 dus</button>
+        <form method="dialog"><button class="detail-close" type="submit">Tutup</button></form>
+      </div>
+    </div>
+  </dialog>
+  <div class="cart-toast" role="status" aria-live="polite"></div>
+  <script>
+    const products = [
+      { id: "coklat-kelapa", name: "Roti Nana 2 Rasa Coklat & Kelapa", category: "Roti 2 Rasa", desc: "Dua rasa favorit coklat dan kelapa dalam satu roti.", image: "roti-nana-2-rasa-coklat-kelapa.png" },
+      { id: "coklat-pandan", name: "Roti Nana 2 Rasa Coklat & Pandan", category: "Roti 2 Rasa", desc: "Perpaduan rasa coklat dan pandan dalam satu roti.", image: "roti-nana-2-rasa-coklat-pandan.png" },
+      { id: "coklat-strawberry", name: "Roti Nana 2 Rasa Coklat & Strawberry", category: "Roti 2 Rasa", desc: "Dua rasa manis coklat dan strawberry yang berpadu.", image: "roti-nana-2-rasa-coklat-strawberry.png" },
+      { id: "coklat-susu", name: "Roti Nana 2 Rasa Coklat Susu", category: "Roti 2 Rasa", desc: "Kombinasi rasa coklat dan susu dalam roti Nana.", image: "roti-nana-2-rasa-coklat-susu.png" },
+      { id: "krim-coklat", name: "Roti Nana Krim Coklat", category: "Roti Krim", desc: "Roti Nana dengan krim rasa coklat.", image: "roti-nana-krim-coklat.png" },
+      { id: "krim-pandan", name: "Roti Nana Krim Pandan", category: "Roti Krim", desc: "Roti Nana dengan krim rasa pandan.", image: "roti-nana-krim-pandan.png" }
+    ];
+    const cartStorageKey = "roti-nana-wholesale-requests-v1";
+    const orderUnits = ["Dus", "Ball", "Karton", "Pcs"];
+    const buyerTypes = ["Toko/Warung", "Agen/Distributor/Reseller", "Katering/Instansi", "Lainnya"];
+    const deliveryPlans = ["Dikirim ke alamat", "Ambil langsung / koordinasi pabrik"];
+    const productById = new Map(products.map(product => [product.id, product]));
+    const cartDialog = document.querySelector(".cart-drawer");
+    const cartItems = cartDialog.querySelector(".cart-items");
+    const cartEmpty = cartDialog.querySelector(".cart-empty");
+    const cartSummary = cartDialog.querySelector(".cart-summary");
+    const cartNotice = document.querySelector("#cart-notice");
+    const cartStatus = document.querySelector(".cart-status");
+    const orderSummary = document.querySelector(".order-summary");
+    const orderText = document.querySelector("#order-text");
+    const cartToast = document.querySelector(".cart-toast");
+    const requestFields = [
+      document.querySelector("#business-name"),
+      document.querySelector("#contact-person"),
+      document.querySelector("#customer-contact"),
+      document.querySelector("#business-city"),
+      document.querySelector("#additional-notes")
+    ];
+    const requiredRequestFields = requestFields.slice(0, 3);
+    const buyerTypeField = document.querySelector("#buyer-type");
+    const deliveryPlanField = document.querySelector("#delivery-plan");
+    const requestWhatsAppLink = document.querySelector("#send-request-whatsapp");
+    let cart = new Map();
+    let cartMessage = "";
+    let lastCartTrigger = null;
+    let toastTimer;
+
+    let activeCategory = "Semua";
+    const grid = document.querySelector(".product-grid");
+    const search = document.querySelector(".search");
+    const catalogStatus = document.querySelector(".catalog-status");
+    const filters = [...document.querySelectorAll(".filter")];
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const productDetail = document.querySelector(".product-detail");
+    let lastProductTrigger = null;
+
+    function loadCart() {
+      let serializedCart;
+      try {
+        serializedCart = localStorage.getItem(cartStorageKey);
+      } catch {
+        cartMessage = "Browser tidak mengizinkan membaca penyimpanan. Pilihan hanya tersedia selama halaman terbuka.";
+        return;
+      }
+      if (!serializedCart) return;
+
+      let savedEntries;
+      try {
+        savedEntries = JSON.parse(serializedCart);
+      } catch {
+        cartMessage = "Data permintaan tersimpan rusak dan tidak dapat dibaca.";
+        return;
+      }
+      if (!Array.isArray(savedEntries)) {
+        cartMessage = "Format data permintaan tersimpan tidak valid.";
+        return;
+      }
+
+      const seenProductIds = new Set();
+      for (const entry of savedEntries) {
+        const unit = entry && typeof entry === "object" && entry.unit === undefined ? "Dus" : entry?.unit;
+        const validEntry = entry && typeof entry === "object" && !Array.isArray(entry) &&
+          typeof entry.id === "string" && productById.has(entry.id) &&
+          Number.isInteger(entry.quantity) && entry.quantity >= 1 && entry.quantity <= 9999 &&
+          orderUnits.includes(unit) &&
+          !seenProductIds.has(entry.id);
+        if (!validEntry) {
+          cartMessage = "Sebagian data tersimpan tidak valid (produk duplikat, satuan tidak dikenal, atau jumlah di luar 1–9.999) dan dilewati.";
+          continue;
+        }
+        seenProductIds.add(entry.id);
+        cart.set(entry.id, { quantity: entry.quantity, unit });
+      }
+    }
+
+    function saveCart() {
+      try {
+        localStorage.setItem(cartStorageKey, JSON.stringify([...cart].map(([id, item]) => ({ id, ...item }))));
+        cartMessage = "";
+      } catch {
+        cartMessage = "Pilihan tersedia selama halaman terbuka, tetapi browser gagal menyimpannya.";
+      }
+    }
+
+    function createTextElement(tagName, className, text) {
+      const element = document.createElement(tagName);
+      if (className) element.className = className;
+      element.textContent = text;
+      return element;
+    }
+
+    function setProductImage(imageElement, product) {
+      if (typeof product.image !== "string" || !/^[a-z0-9-]+\.png$/i.test(product.image)) {
+        imageElement.removeAttribute("src");
+        imageElement.alt = `Gambar untuk ${product.name} tidak tersedia`;
+        return;
+      }
+      imageElement.src = `assets/${encodeURIComponent(product.image)}`;
+      imageElement.alt = `Kemasan ${product.name}`;
+    }
+
+    function updateCartCount() {
+      const count = cart.size;
+      document.querySelectorAll(".cart-count").forEach(element => { element.textContent = String(count); });
+      document.querySelectorAll("[data-open-cart]").forEach(button => {
+        button.setAttribute("aria-label", `Buka permintaan grosir, ${count} jenis produk dipilih`);
+      });
+    }
+
+    function renderCart() {
+      const entries = [...cart].filter(([id]) => productById.has(id));
+      const totalsByUnit = new Map(orderUnits.map(unit => [unit, 0]));
+      entries.forEach(([, item]) => totalsByUnit.set(item.unit, totalsByUnit.get(item.unit) + item.quantity));
+      const itemNodes = entries.map(([id, item]) => {
+        const product = productById.get(id);
+        const article = document.createElement("article");
+        article.className = "cart-item";
+        const image = document.createElement("img");
+        setProductImage(image, product);
+        image.alt = "";
+        image.width = 64;
+        image.height = 64;
+        const details = document.createElement("div");
+        details.append(
+          createTextElement("h3", "", product.name),
+          createTextElement("small", "", product.category)
+        );
+        const quantityControls = document.createElement("div");
+        quantityControls.className = "cart-item-controls cart-quantity";
+        quantityControls.setAttribute("aria-label", `Jumlah ${item.unit} ${product.name}`);
+        const unitLabel = createTextElement("label", "cart-unit-label", "Satuan");
+        const unitSelect = document.createElement("select");
+        unitSelect.className = "cart-unit-select";
+        unitSelect.dataset.cartUnit = "";
+        unitSelect.dataset.productId = id;
+        unitSelect.setAttribute("aria-label", `Satuan jumlah ${product.name}`);
+        orderUnits.forEach(unit => {
+          const option = createTextElement("option", "", unit);
+          option.value = unit;
+          option.selected = unit === item.unit;
+          unitSelect.append(option);
+        });
+        unitLabel.append(unitSelect);
+        quantityControls.append(
+          unitLabel,
+          createCartActionButton("decrease", id, `Kurangi ${item.unit} ${product.name}`, "−"),
+          createTextElement("output", "", `${item.quantity} ${item.unit}`),
+          createCartActionButton("increase", id, `Tambah ${item.unit} ${product.name}`, "+")
+        );
+        details.append(quantityControls);
+        article.append(image, details, createCartActionButton("remove", id, `Hapus ${product.name}`, "Hapus", "cart-remove"));
+        return article;
+      });
+      cartItems.replaceChildren(...itemNodes);
+      cartItems.hidden = entries.length === 0;
+      cartEmpty.hidden = entries.length > 0;
+      cartSummary.hidden = entries.length === 0;
+      cartSummary.querySelector(".cart-unit-total").textContent = orderUnits
+        .filter(unit => totalsByUnit.get(unit) > 0)
+        .map(unit => `${totalsByUnit.get(unit)} ${unit}`)
+        .join(" · ") || "-";
+      cartNotice.textContent = cartMessage;
+      cartNotice.hidden = !cartMessage;
+      updateCartCount();
+      updateOrderSummary();
+    }
+
+    function createCartActionButton(action, productId, label, text, className = "") {
+      const button = createTextElement("button", className, text);
+      button.type = "button";
+      button.dataset.cartAction = action;
+      button.dataset.productId = productId;
+      button.setAttribute("aria-label", label);
+      return button;
+    }
+
+    function notifyCart(message) {
+      cartToast.textContent = message;
+      cartToast.classList.add("show");
+      window.clearTimeout(toastTimer);
+      toastTimer = window.setTimeout(() => cartToast.classList.remove("show"), 2600);
+    }
+
+    function addToCart(product) {
+      const currentItem = cart.get(product.id);
+      if (currentItem?.quantity >= 9999) {
+        notifyCart("Maksimal 9.999 untuk setiap produk dan satuan.");
+        return;
+      }
+      cart.set(product.id, {
+        quantity: (currentItem?.quantity || 0) + 1,
+        unit: currentItem?.unit || "Dus"
+      });
+      saveCart();
+      renderCart();
+      notifyCart(`${product.name}: 1 ${currentItem?.unit || "Dus"} ditambahkan ke permintaan grosir.`);
+    }
+
+    function openCart(trigger) {
+      lastCartTrigger = trigger;
+      renderCart();
+      if (!cartDialog.open) cartDialog.showModal();
+    }
+
+    function updateOrderSummary() {
+      const businessName = document.querySelector("#business-name").value.trim() || "Belum diisi";
+      const contactPerson = document.querySelector("#contact-person").value.trim() || "Belum diisi";
+      const customerContact = document.querySelector("#customer-contact").value.trim() || "Belum diisi";
+      const businessCity = document.querySelector("#business-city").value.trim();
+      const additionalNotes = document.querySelector("#additional-notes").value.trim();
+      const lines = [...cart]
+        .filter(([id]) => productById.has(id))
+        .map(([id, item]) => `- ${productById.get(id).name}: ${item.quantity} ${item.unit}`);
+      orderText.value = [
+        "PERMINTAAN PENAWARAN GROSIR — Friends Bakery / Roti Nana",
+        "",
+        `Toko/perusahaan: ${businessName}`,
+        `Penanggung jawab: ${contactPerson}`,
+        `Kontak pemohon: ${customerContact}`,
+        ...(businessCity ? [`Kota/kabupaten: ${businessCity}`] : []),
+        ...(buyerTypes.includes(buyerTypeField.value) ? [`Jenis usaha/pembeli: ${buyerTypeField.value}`] : []),
+        ...(deliveryPlans.includes(deliveryPlanField.value) ? [`Rencana pengiriman: ${deliveryPlanField.value}`] : []),
+        ...(additionalNotes ? [`Catatan tambahan: ${additionalNotes}`] : []),
+        "",
+        "Produk yang ditanyakan:",
+        ...(lines.length ? lines : ["- Belum ada produk yang dipilih"]),
+        "",
+        "Mohon informasikan harga grosir, minimum pemesanan, ketersediaan, dan biaya pengiriman.",
+        "Ini permintaan penawaran, bukan pesanan yang telah dikonfirmasi."
+      ].join("\n");
+      document.querySelector("#send-request-whatsapp").href =
+        `https://wa.me/6282138315474?text=${encodeURIComponent(orderText.value)}`;
+    }
+
+    function createOrderSummary() {
+      updateOrderSummary();
+      orderSummary.hidden = false;
+      cartStatus.textContent = "Permintaan siap disalin; belum dikirim kepada tim penjualan.";
+    }
+
+    function validateRequest() {
+      if (cart.size === 0) {
+        cartStatus.textContent = "Pilih minimal satu produk sebelum mengirim permintaan.";
+        return false;
+      }
+
+      for (const field of requestFields) {
+        const value = field.value.trim();
+        let errorMessage = "";
+        if (requiredRequestFields.includes(field) && !value) {
+          errorMessage = "Kolom ini wajib diisi.";
+        } else if (value.length > field.maxLength) {
+          errorMessage = `Maksimal ${field.maxLength} karakter.`;
+        } else if (/[\u0000-\u001f\u007f]/.test(value)) {
+          errorMessage = "Hapus karakter yang tidak didukung.";
+        } else if (field.id === "customer-contact" && value.length < 5) {
+          errorMessage = "Masukkan nomor telepon atau email yang dapat dihubungi.";
+        }
+        field.setCustomValidity(errorMessage);
+        if (errorMessage) {
+          cartStatus.textContent = errorMessage;
+          field.focus();
+          field.reportValidity();
+          return false;
+        }
+      }
+      for (const [field, allowedValues] of [[buyerTypeField, buyerTypes], [deliveryPlanField, deliveryPlans]]) {
+        const errorMessage = field.value && !allowedValues.includes(field.value) ? "Pilih salah satu opsi yang tersedia." : "";
+        field.setCustomValidity(errorMessage);
+        if (errorMessage) {
+          cartStatus.textContent = errorMessage;
+          field.focus();
+          field.reportValidity();
+          return false;
+        }
+      }
+      cartStatus.textContent = "";
+      return true;
+    }
+
+    function createProductCard(product) {
+      const article = document.createElement("article");
+      article.className = "product-card";
+      const imageContainer = document.createElement("div");
+      imageContainer.className = "product-image";
+      const image = document.createElement("img");
+      image.loading = "lazy";
+      image.width = 1080;
+      image.height = 1080;
+      setProductImage(image, product);
+      imageContainer.append(image);
+
+      const info = document.createElement("div");
+      info.className = "product-info";
+      info.append(
+        createTextElement("span", "product-category", product.category),
+        createTextElement("h3", "", product.name),
+        createTextElement("p", "", product.desc)
+      );
+      const actions = document.createElement("div");
+      actions.className = "product-actions";
+      const addButton = createTextElement("button", "button add-to-cart", "Tambah 1 dus");
+      addButton.type = "button";
+      addButton.dataset.addProduct = product.id;
+      const detailButton = createTextElement("button", "detail-button", "Detail");
+      detailButton.type = "button";
+      detailButton.dataset.productId = product.id;
+      detailButton.setAttribute("aria-label", `Lihat detail ${product.name}`);
+      actions.append(addButton, detailButton);
+      info.append(actions);
+      article.append(imageContainer, info);
+      return article;
+    }
+
+    function renderEmptyCatalog() {
+      const emptyState = document.createElement("div");
+      emptyState.className = "empty-state";
+      emptyState.append(createTextElement("p", "", "Produk tidak ditemukan. Coba kata kunci atau kategori lain."));
+      const resetButton = createTextElement("button", "", "Reset pencarian dan filter");
+      resetButton.type = "button";
+      resetButton.dataset.resetCatalog = "";
+      emptyState.append(resetButton);
+      return emptyState;
+    }
+
+    function renderProducts() {
+      const query = search.value.trim().toLocaleLowerCase("id");
+      const filtered = products.filter(product =>
+        (activeCategory === "Semua" || product.category === activeCategory) &&
+        `${product.name} ${product.category} ${product.desc}`.toLocaleLowerCase("id").includes(query)
+      );
+      catalogStatus.textContent = `${filtered.length} dari ${products.length} produk ditampilkan`;
+      grid.replaceChildren(...(filtered.length ? filtered.map(createProductCard) : [renderEmptyCatalog()]));
+    }
+
+    function closeMenu(returnFocus) {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Buka menu");
+      if (returnFocus) menuToggle.focus();
+    }
+
+    filters.forEach(button => {
+      button.addEventListener("click", () => {
+        activeCategory = button.dataset.category;
+        filters.forEach(filter => {
+          const isActive = filter === button;
+          filter.classList.toggle("active", isActive);
+          filter.setAttribute("aria-pressed", String(isActive));
+        });
+        renderProducts();
+      });
+    });
+    search.addEventListener("input", renderProducts);
+    grid.addEventListener("click", event => {
+      const addButton = event.target.closest("[data-add-product]");
+      if (addButton) {
+        const product = productById.get(addButton.dataset.addProduct);
+        if (product) addToCart(product);
+        return;
+      }
+      const detailButton = event.target.closest("[data-product-id]");
+      if (detailButton) {
+        const product = productById.get(detailButton.dataset.productId);
+        if (!product) return;
+        lastProductTrigger = detailButton;
+        setProductImage(productDetail.querySelector(".detail-image"), product);
+        productDetail.querySelector(".detail-category").textContent = product.category;
+        productDetail.querySelector("#detail-title").textContent = product.name;
+        productDetail.querySelector(".detail-description").textContent = product.desc;
+        productDetail.querySelector(".detail-add").dataset.productId = product.id;
+        productDetail.showModal();
+        return;
+      }
+      if (event.target.closest("[data-reset-catalog]")) {
+        activeCategory = "Semua";
+        search.value = "";
+        filters.forEach(filter => {
+          const isActive = filter.dataset.category === "Semua";
+          filter.classList.toggle("active", isActive);
+          filter.setAttribute("aria-pressed", String(isActive));
+        });
+        renderProducts();
+        search.focus();
+      }
+    });
+    productDetail.addEventListener("click", event => {
+      if (event.target === productDetail) productDetail.close();
+    });
+    productDetail.addEventListener("close", () => {
+      if (lastProductTrigger?.isConnected) lastProductTrigger.focus();
+      else search.focus();
+    });
+    productDetail.querySelector(".detail-add").addEventListener("click", event => {
+      const product = productById.get(event.currentTarget.dataset.productId);
+      if (!product) return;
+      addToCart(product);
+      productDetail.close();
+    });
+
+    document.querySelectorAll("[data-open-cart]").forEach(button => {
+      button.addEventListener("click", () => {
+        if (navLinks.classList.contains("open")) closeMenu(false);
+        openCart(button);
+      });
+    });
+    cartDialog.addEventListener("click", event => {
+      if (event.target === cartDialog || event.target.closest("[data-close-cart]")) {
+        cartDialog.close();
+        return;
+      }
+      if (event.target.closest("[data-browse-products]")) {
+        cartDialog.close();
+        return;
+      }
+      const action = event.target.closest("[data-cart-action]");
+      if (action) {
+        const id = action.dataset.productId;
+        const item = cart.get(id);
+        if (!item) return;
+        if (action.dataset.cartAction === "remove" || (action.dataset.cartAction === "decrease" && item.quantity === 1)) cart.delete(id);
+        else if (action.dataset.cartAction === "decrease" && item.quantity > 1) cart.set(id, { ...item, quantity: item.quantity - 1 });
+        else if (action.dataset.cartAction === "increase" && item.quantity < 9999) cart.set(id, { ...item, quantity: item.quantity + 1 });
+        else if (action.dataset.cartAction === "increase") {
+          cartStatus.textContent = "Maksimal 9.999 untuk setiap produk dan satuan.";
+          return;
+        }
+        saveCart();
+        cartStatus.textContent = "";
+        renderCart();
+        return;
+      }
+      if (event.target.closest("[data-clear-cart]")) {
+        cart.clear();
+        saveCart();
+        orderSummary.hidden = true;
+        orderText.value = "";
+        cartStatus.textContent = "Pilihan produk dikosongkan.";
+        renderCart();
+        cartStatus.textContent = "Pilihan produk dikosongkan.";
+        return;
+      }
+      if (event.target.closest("[data-start-request]")) {
+        orderSummary.hidden = false;
+        cartDialog.querySelector("#business-name").focus();
+        return;
+      }
+      if (event.target.closest("[data-prepare-order]")) {
+        if (!validateRequest()) return;
+        createOrderSummary();
+        return;
+      }
+      if (event.target.closest("[data-copy-order]")) {
+        orderText.focus();
+        orderText.select();
+        if (!navigator.clipboard || !navigator.clipboard.writeText) {
+          cartStatus.textContent = "Teks dipilih. Salin secara manual dengan Ctrl+C atau tekan lama pada ponsel.";
+          return;
+        }
+        navigator.clipboard.writeText(orderText.value).then(() => {
+          cartStatus.textContent = "Permintaan berhasil disalin. Belum dikirim kepada tim penjualan.";
+        }).catch(() => {
+          cartStatus.textContent = "Teks dipilih. Salin secara manual dengan Ctrl+C atau tekan lama pada ponsel.";
+        });
+      }
+    });
+    cartDialog.addEventListener("change", event => {
+      const unitSelect = event.target.closest("[data-cart-unit]");
+      if (!unitSelect) return;
+      const id = unitSelect.dataset.productId;
+      const item = cart.get(id);
+      if (!item || !orderUnits.includes(unitSelect.value)) {
+        cartStatus.textContent = "Pilihan satuan tidak valid. Pilih Dus, Ball, Karton, atau Pcs.";
+        renderCart();
+        return;
+      }
+      cart.set(id, { ...item, unit: unitSelect.value });
+      saveCart();
+      cartStatus.textContent = `Satuan diperbarui menjadi ${unitSelect.value}.`;
+      renderCart();
+      [...cartItems.querySelectorAll("[data-cart-unit]")].find(select => select.dataset.productId === id)?.focus();
+    });
+    requestWhatsAppLink.addEventListener("click", event => {
+      if (!validateRequest()) {
+        event.preventDefault();
+        return;
+      }
+      updateOrderSummary();
+    });
+    cartDialog.addEventListener("close", () => {
+      if (lastCartTrigger?.isConnected) lastCartTrigger.focus();
+    });
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Tutup menu" : "Buka menu");
+    });
+    navLinks.addEventListener("click", event => {
+      if (event.target.closest("a")) closeMenu(false);
+    });
+    document.addEventListener("click", event => {
+      if (navLinks.classList.contains("open") && !event.target.closest(".nav")) closeMenu(false);
+    });
+    document.addEventListener("keydown", event => {
+      if (event.key !== "Escape") return;
+      if (productDetail.open) {
+        event.preventDefault();
+        productDetail.close();
+        return;
+      }
+      if (cartDialog.open) {
+        event.preventDefault();
+        cartDialog.close();
+        return;
+      }
+      if (navLinks.classList.contains("open")) closeMenu(true);
+    });
+    ["#business-name", "#contact-person", "#customer-contact", "#business-city", "#additional-notes"].forEach(selector => {
+      document.querySelector(selector).addEventListener("input", event => {
+        event.currentTarget.setCustomValidity("");
+        cartStatus.textContent = "";
+        updateOrderSummary();
+      });
+    });
+    [buyerTypeField, deliveryPlanField].forEach(field => {
+      field.addEventListener("change", () => {
+        cartStatus.textContent = "";
+        updateOrderSummary();
+      });
+    });
+    document.querySelector("#current-year").textContent = String(new Date().getFullYear());
+    loadCart();
+    renderProducts();
+    renderCart();
+  </script>
+</body>
+</html>
