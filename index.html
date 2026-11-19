@@ -318,7 +318,8 @@
     .cart-unit-label { display: inline-flex; align-items: center; gap: 6px; margin: 0; color: #647184; font-size: 10px; }
     .cart-unit-select { min-height: 34px; padding: 5px 24px 5px 8px; border: 1px solid #dfe7ed; border-radius: 8px; background: white; color: #17314f; font: 11px var(--sans); }
     .cart-item-controls button { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid #dfe7ed; border-radius: 50%; background: white; color: #17314f; font-size: 16px; }
-    .cart-item-controls output { min-width: 20px; color: #17314f; font-size: 12px; font-weight: 700; text-align: center; }
+    .cart-quantity-input { width: 76px; min-height: 36px; padding: 6px 5px; border: 1px solid #dfe7ed; border-radius: 8px; background: white; color: #17314f; font: 700 12px var(--sans); text-align: center; }
+    .cart-quantity-input:focus { outline: 2px solid #93bed0; outline-offset: 1px; }
     .cart-remove { align-self: start; padding: 5px; border: 0; background: transparent; color: #9c4a3e; font-size: 10px; }
     .cart-remove:hover { text-decoration: underline; }
     .cart-summary { margin-top: 18px; padding-top: 17px; border-top: 1px solid #e5ebef; }
@@ -587,7 +588,7 @@
         <a href="#tentang">Tentang Kami</a>
         <a href="#kontak">Kontak</a>
         <a href="#karir">Karir</a>
-        <button class="nav-cta cart-trigger" type="button" data-open-cart aria-label="Buka permintaan grosir, 0 jenis produk dipilih">
+        <button class="nav-cta cart-trigger" type="button" data-open-cart aria-label="Buka permintaan grosir, 0 unit dipilih">
           Permintaan grosir
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 2-1.6L21 8H6"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>
           <span class="cart-count" aria-live="polite">0</span>
@@ -795,7 +796,7 @@
       <h2 id="detail-title"></h2>
       <p class="detail-description"></p>
       <div class="detail-actions">
-        <button class="button detail-add" type="button">Tambah 1 dus</button>
+        <button class="button detail-add" type="button">+ Tambah ke daftar</button>
         <form method="dialog"><button class="detail-close" type="submit">Tutup</button></form>
       </div>
     </div>
@@ -916,17 +917,25 @@
     }
 
     function updateCartCount() {
-      const count = cart.size;
+      const count = [...cart.values()].reduce((total, item) => total + item.quantity, 0);
       document.querySelectorAll(".cart-count").forEach(element => { element.textContent = String(count); });
       document.querySelectorAll("[data-open-cart]").forEach(button => {
-        button.setAttribute("aria-label", `Buka permintaan grosir, ${count} jenis produk dipilih`);
+        button.setAttribute("aria-label", `Buka permintaan grosir, ${count} unit dipilih`);
       });
+    }
+
+    function updateCartTotals() {
+      const entries = [...cart].filter(([id]) => productById.has(id));
+      const totalsByUnit = new Map(orderUnits.map(unit => [unit, 0]));
+      entries.forEach(([, item]) => totalsByUnit.set(item.unit, totalsByUnit.get(item.unit) + item.quantity));
+      cartSummary.querySelector(".cart-unit-total").textContent = orderUnits
+        .filter(unit => totalsByUnit.get(unit) > 0)
+        .map(unit => `${totalsByUnit.get(unit)} ${unit}`)
+        .join(" · ") || "-";
     }
 
     function renderCart() {
       const entries = [...cart].filter(([id]) => productById.has(id));
-      const totalsByUnit = new Map(orderUnits.map(unit => [unit, 0]));
-      entries.forEach(([, item]) => totalsByUnit.set(item.unit, totalsByUnit.get(item.unit) + item.quantity));
       const itemNodes = entries.map(([id, item]) => {
         const product = productById.get(id);
         const article = document.createElement("article");
@@ -960,7 +969,7 @@
         quantityControls.append(
           unitLabel,
           createCartActionButton("decrease", id, `Kurangi ${item.unit} ${product.name}`, "−"),
-          createTextElement("output", "", `${item.quantity} ${item.unit}`),
+          createQuantityInput(id, product.name, item.quantity),
           createCartActionButton("increase", id, `Tambah ${item.unit} ${product.name}`, "+")
         );
         details.append(quantityControls);
@@ -971,14 +980,50 @@
       cartItems.hidden = entries.length === 0;
       cartEmpty.hidden = entries.length > 0;
       cartSummary.hidden = entries.length === 0;
-      cartSummary.querySelector(".cart-unit-total").textContent = orderUnits
-        .filter(unit => totalsByUnit.get(unit) > 0)
-        .map(unit => `${totalsByUnit.get(unit)} ${unit}`)
-        .join(" · ") || "-";
       cartNotice.textContent = cartMessage;
       cartNotice.hidden = !cartMessage;
       updateCartCount();
+      updateCartTotals();
       updateOrderSummary();
+    }
+
+    function createQuantityInput(productId, productName, quantity) {
+      const input = document.createElement("input");
+      input.className = "cart-quantity-input";
+      input.type = "number";
+      input.min = "1";
+      input.max = "9999";
+      input.step = "1";
+      input.value = String(quantity);
+      input.inputMode = "numeric";
+      input.dataset.cartQuantity = "";
+      input.dataset.productId = productId;
+      input.setAttribute("aria-label", `Jumlah ${productName}, 1 sampai 9.999`);
+      return input;
+    }
+
+    function syncQuantityInput(input, finalize = false) {
+      const item = cart.get(input.dataset.productId);
+      if (!item) return;
+      const rawValue = input.value.trim();
+      const quantity = Number(rawValue);
+      if (!rawValue || !Number.isInteger(quantity)) {
+        if (finalize) {
+          input.value = String(item.quantity);
+          cartStatus.textContent = "Jumlah harus bilangan bulat 1–9.999. Jumlah sebelumnya dipulihkan.";
+        }
+        return;
+      }
+      if ((quantity < 1 || quantity > 9999) && !finalize) return;
+      const validQuantity = Math.min(9999, Math.max(1, quantity));
+      input.value = String(validQuantity);
+      cart.set(input.dataset.productId, { ...item, quantity: validQuantity });
+      saveCart();
+      updateCartCount();
+      updateCartTotals();
+      updateOrderSummary();
+      if (validQuantity !== quantity) cartStatus.textContent = "Jumlah disesuaikan ke rentang 1–9.999.";
+      else if (finalize) cartStatus.textContent = "";
     }
 
     function createCartActionButton(action, productId, label, text, className = "") {
@@ -1115,7 +1160,7 @@
       );
       const actions = document.createElement("div");
       actions.className = "product-actions";
-      const addButton = createTextElement("button", "button add-to-cart", "Tambah 1 dus");
+      const addButton = createTextElement("button", "button add-to-cart", "+ Tambah ke daftar");
       addButton.type = "button";
       addButton.dataset.addProduct = product.id;
       const detailButton = createTextElement("button", "detail-button", "Detail");
@@ -1281,6 +1326,11 @@
       }
     });
     cartDialog.addEventListener("change", event => {
+      const quantityInput = event.target.closest("[data-cart-quantity]");
+      if (quantityInput) {
+        syncQuantityInput(quantityInput, true);
+        return;
+      }
       const unitSelect = event.target.closest("[data-cart-unit]");
       if (!unitSelect) return;
       const id = unitSelect.dataset.productId;
@@ -1295,6 +1345,10 @@
       cartStatus.textContent = `Satuan diperbarui menjadi ${unitSelect.value}.`;
       renderCart();
       [...cartItems.querySelectorAll("[data-cart-unit]")].find(select => select.dataset.productId === id)?.focus();
+    });
+    cartDialog.addEventListener("input", event => {
+      const quantityInput = event.target.closest("[data-cart-quantity]");
+      if (quantityInput) syncQuantityInput(quantityInput);
     });
     requestWhatsAppLink.addEventListener("click", event => {
       if (!validateRequest()) {
