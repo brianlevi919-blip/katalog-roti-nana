@@ -93,9 +93,10 @@
     .avatars i:nth-child(3) { background: #cf8b65; }
     .hero-photo { position: relative; min-height: 490px; }
     .hero-photo > img { width: 100%; height: 490px; display: block; object-fit: cover; border-radius: 48% 48% 5px 5px; }
-    .photo-tag { position: absolute; right: -17px; bottom: 30px; width: 160px; padding: 17px; background: var(--paper); box-shadow: 0 15px 40px #27261d18; }
-    .photo-tag strong { display: block; margin-bottom: 4px; color: var(--green); font-family: var(--serif); font-size: 20px; }
-    .photo-tag span { color: var(--muted); font-size: 10px; }
+    .photo-tag { position: absolute; right: -17px; bottom: 30px; width: min(248px, calc(100% - 28px)); padding: 18px 22px 19px; border: 1px solid #ffffff; border-left: 4px solid var(--orange); border-radius: 16px; background: linear-gradient(135deg, #fffdf8, #ffffff); box-shadow: 0 18px 42px #17314f26; }
+    .photo-tag small { display: block; margin-bottom: 4px; color: var(--orange); font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .photo-tag strong { display: block; margin-bottom: 3px; color: #17314f; font-family: var(--sans); font-size: 21px; font-weight: 800; letter-spacing: -.04em; }
+    .photo-tag span { display: block; color: var(--muted); font-size: 12px; line-height: 1.5; }
     .photo-stamp { position: absolute; top: 35px; left: -24px; width: 84px; height: 84px; display: grid; place-items: center; padding: 13px; border: 1px solid #fff9; border-radius: 50%; background: var(--orange); color: white; font-size: 9px; font-weight: 700; letter-spacing: .08em; line-height: 1.5; text-align: center; transform: rotate(-12deg); }
 
     .trust { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #f3efe5; }
@@ -195,9 +196,9 @@
     .avatars i:nth-child(3) { background: #3994ae; }
     .hero-photo { min-height: 470px; display: grid; place-items: center; padding: 26px; border: 1px solid #f1dfaa; border-radius: 40% 40% 28px 28px; background: linear-gradient(150deg,#ffdf71 0%,#ffbe54 100%); }
     .hero-photo > img { width: min(100%, 410px); height: auto; aspect-ratio: 1; border-radius: 24px; object-fit: cover; box-shadow: 0 22px 50px #80491c30; }
-    .photo-tag { right: -20px; bottom: 25px; width: 173px; padding: 17px 19px; border-radius: 14px; box-shadow: 0 15px 40px #27261d20; }
-    .photo-tag strong { color: var(--green); font-family: var(--sans); font-size: 17px; font-weight: 800; }
-    .photo-tag span { font-size: 10px; line-height: 1.5; }
+    .photo-tag { right: -20px; bottom: 25px; width: min(248px, calc(100% - 28px)); padding: 18px 22px 19px; border-radius: 16px; box-shadow: 0 15px 40px #27261d20; }
+    .photo-tag strong { font-size: 20px; }
+    .photo-tag span { font-size: 12px; line-height: 1.5; }
     .photo-stamp { top: 21px; left: -28px; width: 78px; height: 78px; background: var(--green); font-size: 8px; }
 
     .trust { border: 0; background: #14365a; color: white; }
@@ -389,8 +390,16 @@
     }
     .whatsapp-float:hover { background: #0e7040; transform: translateY(-2px); }
     .whatsapp-float:focus-visible { outline: 3px solid #17314f; outline-offset: 3px; }
-    .request-whatsapp { width: 100%; min-height: 46px; margin-top: 9px; border: 0; border-radius: 999px; background: #168b52; color: white; font-size: 11px; font-weight: 700; }
-    .request-whatsapp:hover { background: #0e7040; }
+    .request-whatsapp { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 66px; margin-top: 12px; padding: 11px 15px; border: 1px solid #0e7040; border-radius: 14px; background: linear-gradient(135deg, #168b52, #0e7040); color: white; box-shadow: 0 9px 22px #168b5230; transition: background .2s, box-shadow .2s, transform .2s; }
+    .request-whatsapp:hover { background: linear-gradient(135deg, #117b48, #0a6037); box-shadow: 0 12px 26px #168b5240; transform: translateY(-1px); }
+    .request-whatsapp:focus-visible { outline: 3px solid #17314f; outline-offset: 3px; }
+    .request-whatsapp-icon { width: 38px; height: 38px; display: grid; flex: 0 0 auto; place-items: center; border: 1px solid #ffffff70; border-radius: 50%; background: #ffffff20; }
+    .request-whatsapp-icon svg { width: 21px; height: 21px; }
+    .request-whatsapp-copy { display: grid; flex: 1; gap: 2px; }
+    .request-whatsapp-copy strong { font-size: 12px; line-height: 1.4; }
+    .request-whatsapp-copy small { color: #e5f7ed; font-size: 10px; font-weight: 500; line-height: 1.4; }
+    .request-whatsapp-arrow { flex: 0 0 auto; font-size: 20px; transition: transform .2s; }
+    .request-whatsapp:hover .request-whatsapp-arrow { transform: translateX(3px); }
 
     footer { background: #102b49; }
     footer .brand { color: white; }
@@ -430,7 +439,9 @@
       .hero-photo { min-height: 0; margin: 0 14px 0 9px; padding: 18px; border-radius: 38% 38% 22px 22px; }
       .hero-photo > img { width: 100%; max-width: 360px; }
       .photo-stamp { left: -20px; width: 70px; height: 70px; font-size: 10px; }
-      .photo-tag { right: -10px; bottom: 16px; }
+      .photo-tag { right: -10px; bottom: 16px; width: min(230px, calc(100% - 20px)); padding: 15px 17px 16px; }
+      .photo-tag strong { font-size: 19px; }
+      .photo-tag span { font-size: 11px; }
       .trust-row { grid-template-columns: 1fr 1fr; padding: 9px 0; }
       .trust-item { justify-content: flex-start; gap: 9px; padding: 12px 7px; border: 0; }
       .trust-icon { font-size: 19px; }
@@ -445,7 +456,7 @@
       .product-info p { min-height: 45px; font-size: 12px; }
       .product-category { padding: 4px 7px; font-size: 11px; }
       .product-actions .add-to-cart, .product-actions .detail-button { font-size: 11px; }
-      .hero-note, .photo-tag span { font-size: 11px; }
+      .hero-note { font-size: 11px; }
       .section-heading { align-items: flex-start; flex-direction: column; gap: 13px; }
       .section-heading p, .contact-copy p, .about-copy p, .info-card p { font-size: 13px; }
       .contact-actions small, .info-card > p:last-child { font-size: 12px; }
@@ -616,7 +627,11 @@
         <div class="hero-photo">
           <img src="assets/roti-nana-2-rasa-coklat-strawberry.png" alt="Kemasan Roti Nana rasa cokelat dan strawberry" fetchpriority="high" width="1080" height="1080">
           <div class="photo-stamp" aria-hidden="true">NIKMAT<br>DI MULUT<br>RINGAN DI SAKU</div>
-          <div class="photo-tag"><strong>Roti Nana</strong><span>Teman lezat di setiap suasana</span></div>
+          <div class="photo-tag">
+            <small>Friends Bakery · Sejak 1980</small>
+            <strong>Roti Nana</strong>
+            <span>Teman lezat di setiap suasana</span>
+          </div>
         </div>
       </div>
     </section>
@@ -784,7 +799,14 @@
           <textarea id="order-text" readonly></textarea>
           <button class="copy-order" type="button" data-copy-order>Salin permintaan</button>
           <a class="request-whatsapp" id="send-request-whatsapp" href="https://wa.me/6282138315474" target="_blank" rel="noopener noreferrer">
-            Kirim permintaan lewat WhatsApp
+            <span class="request-whatsapp-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .1 5.4.1 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.6a12 12 0 0 0 5.8 1.5h.1c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.7-8.4ZM12.1 21.9a10 10 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.6-.3-.4A9.8 9.8 0 0 1 2.1 12c0-5.5 4.5-10 10-10 2.7 0 5.2 1 7.1 2.9a9.9 9.9 0 0 1 2.9 7.1c0 5.5-4.5 9.9-10 9.9Zm5.5-7.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-1-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/></svg>
+            </span>
+            <span class="request-whatsapp-copy">
+              <strong>Kirim permintaan lewat WhatsApp</strong>
+              <small>Pesan siap diteruskan ke tim Friends Bakery</small>
+            </span>
+            <span class="request-whatsapp-arrow" aria-hidden="true">→</span>
           </a>
           <p>WhatsApp akan dibuka dengan ringkasan dan detail kontak yang Anda isi. Periksa pesannya sebelum mengirim; permintaan belum menjadi pesanan.</p>
         </div>
